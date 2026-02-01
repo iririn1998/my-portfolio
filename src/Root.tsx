@@ -1,4 +1,5 @@
 import type React from "react";
+import "./style/reset.css";
 import "./index.css";
 
 export default function Root({ children }: { children: React.ReactNode }) {
@@ -10,7 +11,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>my-portfolio</title>
       </head>
-      <body>
+      <body className="flex items-center justify-center min-h-screen font-sans antialiased">
         <div className="app">{children}</div>
       </body>
     </html>
