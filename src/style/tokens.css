@@ -184,10 +184,7 @@
     --glass-bg-medium: rgba(255, 255, 255, 0.15);
     --glass-bg-strong: rgba(255, 255, 255, 0.25);
 
-    /** ダークモード用ガラス背景色 */
-    --glass-bg-dark-light: rgba(0, 0, 0, 0.1);
-    --glass-bg-dark-medium: rgba(0, 0, 0, 0.2);
-    --glass-bg-dark-strong: rgba(0, 0, 0, 0.4);
+
 
     /** ブラー効果 */
     --glass-blur-sm: blur(4px);
@@ -197,7 +194,7 @@
 
     /** ガラスボーダー */
     --glass-border: 1px solid rgba(255, 255, 255, 0.18);
-    --glass-border-dark: 1px solid rgba(255, 255, 255, 0.08);
+
 
     /** ガラスシャドウ */
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

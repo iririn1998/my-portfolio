@@ -1,0 +1,133 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Design Tokens/Glassmorphism" />
+
+# Glassmorphism Effects
+
+グラスモーフィズムスタイルを実現するためのデザイントークンです。
+
+---
+
+## Glass Background
+
+export const GlassCard = ({ variable, label, dark }) => (
+  <div style={{
+    padding: '2rem',
+    borderRadius: '16px',
+    background: `var(${variable})`,
+    backdropFilter: 'var(--glass-blur-lg)',
+    border: 'var(--glass-border)',
+    boxShadow: 'var(--glass-shadow)',
+    flex: 1,
+  }}>
+    <div style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{label}</div>
+    <code style={{ fontSize: '0.75rem', color: dark ? 'var(--color-neutral-400)' : 'var(--color-neutral-300)' }}>
+      {variable}
+    </code>
+  </div>
+);
+
+<div style={{ 
+  padding: '2rem', 
+  background: 'var(--gradient-mesh), var(--color-neutral-950)',
+  borderRadius: '16px',
+  marginBottom: '2rem',
+  display: 'flex',
+  gap: '1rem',
+}}>
+  <GlassCard variable="--glass-bg-light" label="Light (10% opacity)" />
+  <GlassCard variable="--glass-bg-medium" label="Medium (15% opacity)" />
+  <GlassCard variable="--glass-bg-strong" label="Strong (25% opacity)" />
+</div>
+
+---
+
+## Blur Effects
+
+export const BlurDemo = ({ variable, label }) => (
+  <div style={{
+    padding: '2rem',
+    borderRadius: '16px',
+    background: 'var(--glass-bg-medium)',
+    backdropFilter: `var(${variable})`,
+    border: 'var(--glass-border)',
+    textAlign: 'center',
+  }}>
+    <div style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{label}</div>
+    <code style={{ fontSize: '0.75rem', color: 'var(--color-neutral-300)' }}>{variable}</code>
+  </div>
+);
+
+<div style={{ 
+  padding: '2rem', 
+  background: 'var(--gradient-mesh), var(--color-neutral-950)',
+  borderRadius: '16px',
+  marginBottom: '2rem'
+}}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+    <BlurDemo variable="--glass-blur-sm" label="Small (4px)" />
+    <BlurDemo variable="--glass-blur-md" label="Medium (8px)" />
+    <BlurDemo variable="--glass-blur-lg" label="Large (16px)" />
+    <BlurDemo variable="--glass-blur-xl" label="Extra Large (24px)" />
+  </div>
+</div>
+
+---
+
+## Glass Shadows
+
+export const ShadowDemo = ({ variable, label }) => (
+  <div style={{
+    padding: '2rem',
+    borderRadius: '16px',
+    background: 'var(--glass-bg-strong)',
+    backdropFilter: 'var(--glass-blur-lg)',
+    border: 'var(--glass-border)',
+    boxShadow: `var(${variable})`,
+    textAlign: 'center',
+    flex: 1,
+  }}>
+    <div style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{label}</div>
+    <code style={{ fontSize: '0.75rem', color: 'var(--color-neutral-300)' }}>{variable}</code>
+  </div>
+);
+
+<div style={{ 
+  padding: '3rem', 
+  background: 'var(--gradient-aurora)',
+  borderRadius: '16px',
+  marginBottom: '2rem',
+  display: 'flex',
+  gap: '1rem',
+}}>
+  <ShadowDemo variable="--glass-shadow-sm" label="Small Shadow" />
+  <ShadowDemo variable="--glass-shadow" label="Default Shadow" />
+  <ShadowDemo variable="--glass-shadow-lg" label="Large Shadow" />
+</div>
+
+---
+
+## Gradient Backgrounds
+
+export const GradientDemo = ({ variable, label, height }) => (
+  <div style={{
+    height: height || '200px',
+    borderRadius: '16px',
+    background: `var(${variable}), var(--color-neutral-950)`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    marginBottom: '1rem',
+    border: '1px solid var(--color-neutral-800)',
+  }}>
+    <div style={{ fontWeight: 600, marginBottom: '0.5rem', color: 'white' }}>{label}</div>
+    <code style={{ fontSize: '0.75rem', color: 'var(--color-neutral-300)' }}>{variable}</code>
+  </div>
+);
+
+<GradientDemo variable="--gradient-primary" label="Primary Gradient" />
+<GradientDemo variable="--gradient-mesh" label="Mesh Gradient" />
+<GradientDemo variable="--gradient-aurora" label="Aurora Gradient" />
+
+---
