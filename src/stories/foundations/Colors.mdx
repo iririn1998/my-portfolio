@@ -1,0 +1,99 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Design Tokens/Colors" />
+
+# Colors
+
+グラスモーフィズムに適した深みのあるカラーパレットです。
+
+export const ColorSwatch = ({ name, variable, color }) => (
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    padding: '0.5rem',
+  }}>
+    <div style={{
+      width: '48px',
+      height: '48px',
+      borderRadius: '8px',
+      backgroundColor: `var(${variable})`,
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      flexShrink: 0,
+    }} />
+    <div>
+      <div style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-neutral-200)' }}>{name}</div>
+      <code style={{ fontSize: '0.75rem', color: 'var(--color-neutral-400)' }}>{variable}</code>
+    </div>
+  </div>
+);
+
+export const ColorScale = ({ name, prefix }) => (
+  <div style={{ marginBottom: '2rem' }}>
+    <h3 style={{ marginBottom: '1rem', color: 'var(--color-neutral-200)' }}>{name}</h3>
+    <div style={{ 
+      display: 'grid', 
+      gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+      gap: '0.5rem',
+      background: 'var(--color-neutral-900)',
+      padding: '1rem',
+      borderRadius: '12px',
+    }}>
+      <ColorSwatch name="50" variable={`${prefix}-50`} />
+      <ColorSwatch name="100" variable={`${prefix}-100`} />
+      <ColorSwatch name="200" variable={`${prefix}-200`} />
+      <ColorSwatch name="300" variable={`${prefix}-300`} />
+      <ColorSwatch name="400" variable={`${prefix}-400`} />
+      <ColorSwatch name="500" variable={`${prefix}-500`} />
+      <ColorSwatch name="600" variable={`${prefix}-600`} />
+      <ColorSwatch name="700" variable={`${prefix}-700`} />
+      <ColorSwatch name="800" variable={`${prefix}-800`} />
+      <ColorSwatch name="900" variable={`${prefix}-900`} />
+      <ColorSwatch name="950" variable={`${prefix}-950`} />
+    </div>
+  </div>
+);
+
+---
+
+## Primary Colors (Purple-Blue)
+
+<ColorScale name="Primary" prefix="--color-primary" />
+
+---
+
+## Secondary Colors (Pink-Purple)
+
+<ColorScale name="Secondary" prefix="--color-secondary" />
+
+---
+
+## Neutral Colors (Slate)
+
+<ColorScale name="Neutral" prefix="--color-neutral" />
+
+---
+
+## Semantic Colors
+
+export const SemanticColorGroup = ({ name, prefix }) => (
+  <div style={{ marginBottom: '1.5rem' }}>
+    <h4 style={{ marginBottom: '0.75rem', color: 'var(--color-neutral-300)' }}>{name}</h4>
+    <div style={{ 
+      display: 'flex', 
+      gap: '0.5rem',
+      background: 'var(--color-neutral-900)',
+      padding: '1rem',
+      borderRadius: '12px',
+    }}>
+      <ColorSwatch name="Light" variable={`${prefix}-light`} />
+      <ColorSwatch name="Default" variable={`${prefix}`} />
+      <ColorSwatch name="Dark" variable={`${prefix}-dark`} />
+    </div>
+  </div>
+);
+
+<SemanticColorGroup name="Success" prefix="--color-success" />
+<SemanticColorGroup name="Warning" prefix="--color-warning" />
+<SemanticColorGroup name="Error" prefix="--color-error" />
+<SemanticColorGroup name="Info" prefix="--color-info" />
