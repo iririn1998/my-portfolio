@@ -1,0 +1,236 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Design Tokens/Typography" />
+
+# Design Tokens
+
+ポートフォリオサイト用のタイポグラフィトークンです。
+
+## フォントファミリー
+
+export const FontFamilyCard = ({ name, variable, sample }) => (
+  <div
+    style={{
+      padding: "1.5rem",
+      marginBottom: "1rem",
+      background: "var(--color-neutral-50)",
+      border: "1px solid var(--color-neutral-200)",
+      borderRadius: "12px",
+    }}
+  >
+    <div
+      style={{ fontSize: "0.875rem", color: "var(--color-neutral-600)", marginBottom: "0.5rem" }}
+    >
+      <code>{variable}</code>
+    </div>
+    <div style={{ fontFamily: `var(${variable})`, fontSize: "1.5rem", fontWeight: 500 }}>
+      {sample}
+    </div>
+  </div>
+);
+
+<div
+  style={{
+    marginBottom: "2rem",
+  }}
+>
+  <FontFamilyCard
+    name="Base (Inter + Noto Sans JP)"
+    variable="--font-family-base"
+    sample="The quick brown fox 素早い茶色のキツネ"
+  />
+  <FontFamilyCard
+    name="English (Inter)"
+    variable="--font-family-en"
+    sample="The quick brown fox jumps over the lazy dog"
+  />
+  <FontFamilyCard
+    name="Japanese (Noto Sans JP)"
+    variable="--font-family-ja"
+    sample="あいうえお 漢字 カタカナ"
+  />
+  <FontFamilyCard
+    name="Monospace (Fira Code)"
+    variable="--font-family-mono"
+    sample="const code = 'example';"
+  />
+</div>
+
+---
+
+## フォントサイズ
+
+export const FontSizeRow = ({ token, size }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "baseline",
+      gap: "1rem",
+      padding: "0.75rem 1rem",
+      borderBottom: "1px solid var(--color-neutral-200)",
+    }}
+  >
+    <code
+      style={{
+        width: "160px",
+        flexShrink: 0,
+        fontSize: "0.75rem",
+        color: "var(--color-neutral-600)",
+      }}
+    >
+      {token}
+    </code>
+    <span
+      style={{
+        width: "80px",
+        flexShrink: 0,
+        fontSize: "0.75rem",
+        color: "var(--color-neutral-500)",
+      }}
+    >
+      {size}
+    </span>
+    <span
+      style={{
+        fontSize: `var(${token})`,
+        fontFamily: "var(--font-family-base)",
+      }}
+    >
+      Typography サンプル
+    </span>
+  </div>
+);
+
+<div
+  style={{
+    background: "var(--color-neutral-50)",
+    borderRadius: "12px",
+    overflow: "hidden",
+    marginBottom: "2rem",
+  }}
+>
+  <FontSizeRow token="--font-size-5xl" size="3rem" />
+  <FontSizeRow token="--font-size-4xl" size="2.25rem" />
+  <FontSizeRow token="--font-size-3xl" size="1.875rem" />
+  <FontSizeRow token="--font-size-2xl" size="1.5rem" />
+  <FontSizeRow token="--font-size-xl" size="1.25rem" />
+  <FontSizeRow token="--font-size-lg" size="1.125rem" />
+  <FontSizeRow token="--font-size-base" size="1rem" />
+  <FontSizeRow token="--font-size-sm" size="0.875rem" />
+  <FontSizeRow token="--font-size-xs" size="0.75rem" />
+</div>
+
+---
+
+## フォントウェイト
+
+export const FontWeightRow = ({ token, weight }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      padding: "0.75rem 1rem",
+      borderBottom: "1px solid var(--color-neutral-200)",
+    }}
+  >
+    <code
+      style={{
+        width: "200px",
+        flexShrink: 0,
+        fontSize: "0.75rem",
+        color: "var(--color-neutral-600)",
+      }}
+    >
+      {token}
+    </code>
+    <span
+      style={{
+        width: "60px",
+        flexShrink: 0,
+        fontSize: "0.75rem",
+        color: "var(--color-neutral-500)",
+      }}
+    >
+      {weight}
+    </span>
+    <span
+      style={{
+        fontWeight: `var(${token})`,
+        fontFamily: "var(--font-family-base)",
+        fontSize: "var(--font-size-lg)",
+      }}
+    >
+      The quick brown fox 素早い茶色のキツネ
+    </span>
+  </div>
+);
+
+<div
+  style={{
+    background: "var(--color-neutral-50)",
+    borderRadius: "12px",
+    overflow: "hidden",
+    marginBottom: "2rem",
+  }}
+>
+  <FontWeightRow token="--font-weight-normal" weight="400" />
+  <FontWeightRow token="--font-weight-medium" weight="500" />
+  <FontWeightRow token="--font-weight-semibold" weight="600" />
+  <FontWeightRow token="--font-weight-bold" weight="700" />
+</div>
+
+---
+
+## 行間 (Line Height) & 字間 (Letter Spacing)
+
+export const TypographyDemo = ({ leading, tracking, label }) => (
+  <div
+    style={{
+      padding: "1.5rem",
+      marginBottom: "1rem",
+      background: "var(--color-neutral-50)",
+      border: "1px solid var(--color-neutral-200)",
+      borderRadius: "12px",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "0.75rem",
+        color: "var(--color-neutral-600)",
+        marginBottom: "0.5rem",
+      }}
+    >
+      {label}
+    </div>
+    <p
+      style={{
+        lineHeight: leading ? `var(${leading})` : "inherit",
+        letterSpacing: tracking ? `var(${tracking})` : "inherit",
+        fontFamily: "var(--font-family-base)",
+        fontSize: "var(--font-size-base)",
+        margin: 0,
+      }}
+    >
+      デザインシステムは、一貫性のあるユーザー体験を提供するための設計原則、コンポーネント、ガイドラインの集合です。
+      A design system is a collection of design principles, components, and guidelines that provide
+      consistent user experiences.
+    </p>
+  </div>
+);
+
+<div
+  style={{
+    marginBottom: "2rem",
+  }}
+>
+  <h4 style={{ color: "var(--color-neutral-700)", marginBottom: "1rem" }}>行間</h4>
+  <TypographyDemo leading="--leading-tight" label="--leading-tight (1.25)" />
+  <TypographyDemo leading="--leading-normal" label="--leading-normal (1.5)" />
+  <TypographyDemo leading="--leading-relaxed" label="--leading-relaxed (1.75)" />
+
+  <h4 style={{ color: "var(--color-neutral-700)", margin: "2rem 0 1rem" }}>字間</h4>
+  <TypographyDemo tracking="--tracking-tight" label="--tracking-tight (-0.025em)" />
+  <TypographyDemo tracking="--tracking-normal" label="--tracking-normal (0)" />
+  <TypographyDemo tracking="--tracking-wide" label="--tracking-wide (0.05em)" />
+</div>
