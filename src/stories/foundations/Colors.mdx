@@ -7,38 +7,46 @@ import { Meta } from "@storybook/addon-docs/blocks";
 グラスモーフィズムに適した深みのあるカラーパレットです。
 
 export const ColorSwatch = ({ name, variable, color }) => (
-  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem',
-    padding: '0.5rem',
-  }}>
-    <div style={{
-      width: '48px',
-      height: '48px',
-      borderRadius: '8px',
-      backgroundColor: `var(${variable})`,
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      flexShrink: 0,
-    }} />
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      padding: "0.5rem",
+    }}
+  >
+    <div
+      style={{
+        width: "48px",
+        height: "48px",
+        borderRadius: "8px",
+        backgroundColor: `var(${variable})`,
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        flexShrink: 0,
+      }}
+    />
     <div>
-      <div style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-neutral-200)' }}>{name}</div>
-      <code style={{ fontSize: '0.75rem', color: 'var(--color-neutral-400)' }}>{variable}</code>
+      <div style={{ fontSize: "0.875rem", fontWeight: 500, color: "var(--color-neutral-200)" }}>
+        {name}
+      </div>
+      <code style={{ fontSize: "0.75rem", color: "var(--color-neutral-400)" }}>{variable}</code>
     </div>
   </div>
 );
 
 export const ColorScale = ({ name, prefix }) => (
-  <div style={{ marginBottom: '2rem' }}>
-    <h3 style={{ marginBottom: '1rem', color: 'var(--color-neutral-200)' }}>{name}</h3>
-    <div style={{ 
-      display: 'grid', 
-      gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-      gap: '0.5rem',
-      background: 'var(--color-neutral-900)',
-      padding: '1rem',
-      borderRadius: '12px',
-    }}>
+  <div style={{ marginBottom: "2rem" }}>
+    <h3 style={{ marginBottom: "1rem", color: "var(--color-neutral-200)" }}>{name}</h3>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+        gap: "0.5rem",
+        background: "var(--color-neutral-900)",
+        padding: "1rem",
+        borderRadius: "12px",
+      }}
+    >
       <ColorSwatch name="50" variable={`${prefix}-50`} />
       <ColorSwatch name="100" variable={`${prefix}-100`} />
       <ColorSwatch name="200" variable={`${prefix}-200`} />
@@ -77,15 +85,17 @@ export const ColorScale = ({ name, prefix }) => (
 ## Semantic Colors
 
 export const SemanticColorGroup = ({ name, prefix }) => (
-  <div style={{ marginBottom: '1.5rem' }}>
-    <h4 style={{ marginBottom: '0.75rem', color: 'var(--color-neutral-300)' }}>{name}</h4>
-    <div style={{ 
-      display: 'flex', 
-      gap: '0.5rem',
-      background: 'var(--color-neutral-900)',
-      padding: '1rem',
-      borderRadius: '12px',
-    }}>
+  <div style={{ marginBottom: "1.5rem" }}>
+    <h4 style={{ marginBottom: "0.75rem", color: "var(--color-neutral-300)" }}>{name}</h4>
+    <div
+      style={{
+        display: "flex",
+        gap: "0.5rem",
+        background: "var(--color-neutral-900)",
+        padding: "1rem",
+        borderRadius: "12px",
+      }}
+    >
       <ColorSwatch name="Light" variable={`${prefix}-light`} />
       <ColorSwatch name="Default" variable={`${prefix}`} />
       <ColorSwatch name="Dark" variable={`${prefix}-dark`} />

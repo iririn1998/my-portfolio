@@ -5,224 +5,227 @@
  */
 
 :root {
-    /* ==========================================================================
+  /* ==========================================================================
    * TYPOGRAPHY - Font Family
    * ========================================================================== */
 
-    /** 日本語フォント */
-    --font-family-ja: "Noto Sans JP", sans-serif;
+  /** 日本語フォント */
+  --font-family-ja: "Noto Sans JP", sans-serif;
 
-    /** 英数字フォント */
-    --font-family-en: "Inter", sans-serif;
+  /** 英数字フォント */
+  --font-family-en: "Inter", sans-serif;
 
-    /** 基本フォントスタック */
-    --font-family-base: var(--font-family-en), var(--font-family-ja);
+  /** 基本フォントスタック */
+  --font-family-base: var(--font-family-en), var(--font-family-ja);
 
-    /** コード用フォント */
-    --font-family-mono: "Fira Code", "Consolas", monospace;
+  /** コード用フォント */
+  --font-family-mono: "Fira Code", "Consolas", monospace;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * TYPOGRAPHY - Font Size
    * ========================================================================== */
 
-    /** キャプション、ラベル */
-    --font-size-xs: 0.75rem;
-    /* 12px */
+  /** キャプション、ラベル */
+  --font-size-xs: 0.75rem;
+  /* 12px */
 
-    /** 補足テキスト */
-    --font-size-sm: 0.875rem;
-    /* 14px */
+  /** 補足テキスト */
+  --font-size-sm: 0.875rem;
+  /* 14px */
 
-    /** 本文 */
-    --font-size-base: 1rem;
-    /* 16px */
+  /** 本文 */
+  --font-size-base: 1rem;
+  /* 16px */
 
-    /** リード文 */
-    --font-size-lg: 1.125rem;
-    /* 18px */
+  /** リード文 */
+  --font-size-lg: 1.125rem;
+  /* 18px */
 
-    /** 小見出し */
-    --font-size-xl: 1.25rem;
-    /* 20px */
+  /** 小見出し */
+  --font-size-xl: 1.25rem;
+  /* 20px */
 
-    /** セクション見出し */
-    --font-size-2xl: 1.5rem;
-    /* 24px */
+  /** セクション見出し */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
 
-    /** ページ見出し */
-    --font-size-3xl: 1.875rem;
-    /* 30px */
+  /** ページ見出し */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
 
-    /** ヒーロー見出し */
-    --font-size-4xl: 2.25rem;
-    /* 36px */
+  /** ヒーロー見出し */
+  --font-size-4xl: 2.25rem;
+  /* 36px */
 
-    /** メインタイトル */
-    --font-size-5xl: 3rem;
-    /* 48px */
+  /** メインタイトル */
+  --font-size-5xl: 3rem;
+  /* 48px */
 
-    /* ==========================================================================
+  /* ==========================================================================
    * TYPOGRAPHY - Font Weight
    * ========================================================================== */
 
-    /** 本文 */
-    --font-weight-normal: 400;
+  /** 本文 */
+  --font-weight-normal: 400;
 
-    /** 強調テキスト */
-    --font-weight-medium: 500;
+  /** 強調テキスト */
+  --font-weight-medium: 500;
 
-    /** 小見出し */
-    --font-weight-semibold: 600;
+  /** 小見出し */
+  --font-weight-semibold: 600;
 
-    /** 見出し */
-    --font-weight-bold: 700;
+  /** 見出し */
+  --font-weight-bold: 700;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * TYPOGRAPHY - Line Height
    * ========================================================================== */
 
-    /** 見出し用（タイト） */
-    --leading-tight: 1.25;
+  /** 見出し用（タイト） */
+  --leading-tight: 1.25;
 
-    /** 本文用（標準） */
-    --leading-normal: 1.5;
+  /** 本文用（標準） */
+  --leading-normal: 1.5;
 
-    /** 本文用（ゆったり） */
-    --leading-relaxed: 1.75;
+  /** 本文用（ゆったり） */
+  --leading-relaxed: 1.75;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * TYPOGRAPHY - Letter Spacing
    * ========================================================================== */
 
-    /** 大きな見出し用 */
-    --tracking-tight: -0.025em;
+  /** 大きな見出し用 */
+  --tracking-tight: -0.025em;
 
-    /** 本文用 */
-    --tracking-normal: 0;
+  /** 本文用 */
+  --tracking-normal: 0;
 
-    /** 小さいテキスト、ラベル用 */
-    --tracking-wide: 0.05em;
+  /** 小さいテキスト、ラベル用 */
+  --tracking-wide: 0.05em;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * COLORS - Primary (Purple-Blue Gradient)
    * ========================================================================== */
 
-    --color-primary-50: #f5f3ff;
-    --color-primary-100: #ede9fe;
-    --color-primary-200: #ddd6fe;
-    --color-primary-300: #c4b5fd;
-    --color-primary-400: #a78bfa;
-    --color-primary-500: #8b5cf6;
-    --color-primary-600: #7c3aed;
-    --color-primary-700: #6d28d9;
-    --color-primary-800: #5b21b6;
-    --color-primary-900: #4c1d95;
-    --color-primary-950: #2e1065;
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+  --color-primary-950: #2e1065;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * COLORS - Secondary (Pink-Purple)
    * ========================================================================== */
 
-    --color-secondary-50: #fdf4ff;
-    --color-secondary-100: #fae8ff;
-    --color-secondary-200: #f5d0fe;
-    --color-secondary-300: #f0abfc;
-    --color-secondary-400: #e879f9;
-    --color-secondary-500: #d946ef;
-    --color-secondary-600: #c026d3;
-    --color-secondary-700: #a21caf;
-    --color-secondary-800: #86198f;
-    --color-secondary-900: #701a75;
-    --color-secondary-950: #4a044e;
+  --color-secondary-50: #fdf4ff;
+  --color-secondary-100: #fae8ff;
+  --color-secondary-200: #f5d0fe;
+  --color-secondary-300: #f0abfc;
+  --color-secondary-400: #e879f9;
+  --color-secondary-500: #d946ef;
+  --color-secondary-600: #c026d3;
+  --color-secondary-700: #a21caf;
+  --color-secondary-800: #86198f;
+  --color-secondary-900: #701a75;
+  --color-secondary-950: #4a044e;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * COLORS - Neutral (Slate)
    * ========================================================================== */
 
-    --color-neutral-50: #f8fafc;
-    --color-neutral-100: #f1f5f9;
-    --color-neutral-200: #e2e8f0;
-    --color-neutral-300: #cbd5e1;
-    --color-neutral-400: #94a3b8;
-    --color-neutral-500: #64748b;
-    --color-neutral-600: #475569;
-    --color-neutral-700: #334155;
-    --color-neutral-800: #1e293b;
-    --color-neutral-900: #0f172a;
-    --color-neutral-950: #020617;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * COLORS - Semantic
    * ========================================================================== */
 
-    /** 成功 */
-    --color-success-light: #86efac;
-    --color-success: #22c55e;
-    --color-success-dark: #15803d;
+  /** 成功 */
+  --color-success-light: #86efac;
+  --color-success: #22c55e;
+  --color-success-dark: #15803d;
 
-    /** 警告 */
-    --color-warning-light: #fde047;
-    --color-warning: #eab308;
-    --color-warning-dark: #a16207;
+  /** 警告 */
+  --color-warning-light: #fde047;
+  --color-warning: #eab308;
+  --color-warning-dark: #a16207;
 
-    /** エラー */
-    --color-error-light: #fca5a5;
-    --color-error: #ef4444;
-    --color-error-dark: #b91c1c;
+  /** エラー */
+  --color-error-light: #fca5a5;
+  --color-error: #ef4444;
+  --color-error-dark: #b91c1c;
 
-    /** 情報 */
-    --color-info-light: #7dd3fc;
-    --color-info: #0ea5e9;
-    --color-info-dark: #0369a1;
+  /** 情報 */
+  --color-info-light: #7dd3fc;
+  --color-info: #0ea5e9;
+  --color-info-dark: #0369a1;
 
-    /* ==========================================================================
+  /* ==========================================================================
    * GLASSMORPHISM EFFECTS
    * ========================================================================== */
 
-    /** ガラス背景色 */
-    --glass-bg-light: rgba(255, 255, 255, 0.1);
-    --glass-bg-medium: rgba(255, 255, 255, 0.15);
-    --glass-bg-strong: rgba(255, 255, 255, 0.25);
+  /** ガラス背景色 */
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-medium: rgba(255, 255, 255, 0.15);
+  --glass-bg-strong: rgba(255, 255, 255, 0.25);
 
+  /** ブラー効果 */
+  --glass-blur-sm: blur(4px);
+  --glass-blur-md: blur(8px);
+  --glass-blur-lg: blur(16px);
+  --glass-blur-xl: blur(24px);
 
+  /** ガラスボーダー */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
 
-    /** ブラー効果 */
-    --glass-blur-sm: blur(4px);
-    --glass-blur-md: blur(8px);
-    --glass-blur-lg: blur(16px);
-    --glass-blur-xl: blur(24px);
+  /** ガラスシャドウ */
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --glass-shadow-sm: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+  --glass-shadow-lg: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
 
-    /** ガラスボーダー */
-    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
-
-
-    /** ガラスシャドウ */
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --glass-shadow-sm: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
-    --glass-shadow-lg: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
-
-    /* ==========================================================================
+  /* ==========================================================================
    * GRADIENTS
    * ========================================================================== */
 
-    /** プライマリグラデーション */
-    --gradient-primary: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-secondary-500) 100%);
+  /** プライマリグラデーション */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary-500) 0%,
+    var(--color-secondary-500) 100%
+  );
 
-    /** メッシュグラデーション背景 */
-    --gradient-mesh:
-        radial-gradient(at 40% 20%, var(--color-primary-700) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, var(--color-secondary-700) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, var(--color-primary-800) 0px, transparent 50%),
-        radial-gradient(at 80% 50%, var(--color-secondary-600) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, var(--color-primary-900) 0px, transparent 50%),
-        radial-gradient(at 80% 100%, var(--color-neutral-900) 0px, transparent 50%);
+  /** メッシュグラデーション背景 */
+  --gradient-mesh:
+    radial-gradient(at 40% 20%, var(--color-primary-700) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, var(--color-secondary-700) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, var(--color-primary-800) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, var(--color-secondary-600) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, var(--color-primary-900) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, var(--color-neutral-900) 0px, transparent 50%);
 
-    /** オーロラグラデーション背景 */
-    --gradient-aurora: linear-gradient(125deg,
-            var(--color-neutral-950) 0%,
-            var(--color-primary-950) 20%,
-            var(--color-secondary-900) 40%,
-            var(--color-primary-800) 60%,
-            var(--color-neutral-900) 80%,
-            var(--color-neutral-950) 100%);
+  /** オーロラグラデーション背景 */
+  --gradient-aurora: linear-gradient(
+    125deg,
+    var(--color-neutral-950) 0%,
+    var(--color-primary-950) 20%,
+    var(--color-secondary-900) 40%,
+    var(--color-primary-800) 60%,
+    var(--color-neutral-900) 80%,
+    var(--color-neutral-950) 100%
+  );
 }
